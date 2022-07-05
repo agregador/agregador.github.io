@@ -1,0 +1,62 @@
+site: Agregador™
+url: https://agregador.github.io
+title: Short URL
+description: Encurtador de URL
+tagline: Encurtador de URL
+lang: pt_BR
+
+google_analytics: 
+
+permalink: pretty
+baseurl: ""
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  html_to_native: true
+  auto_ids: false
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap  
+
+collections:
+  pages:
+    output: true
+    permalink: /:name #/:categories/:name
+  posts:
+    output: true
+    permalink: /:slug #/:year/:month/:day/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      image: /assets/img/default-card.webp
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      image: /assets/img/default-card.webp
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      image: /assets/img/default-card.webp
+
+paginate: 10
+paginate_path: /page/:num/
