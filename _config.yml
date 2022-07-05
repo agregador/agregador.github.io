@@ -4,10 +4,7 @@ title: Short URL
 description: Encurtador de URL
 tagline: Encurtador de URL
 lang: pt_BR
-
 link_default: https://t.me/gore24hrs
-
-google_analytics: 
 
 permalink: pretty
 baseurl: ""
@@ -22,36 +19,12 @@ compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
 
-sass:
-  sass_dir: _sass
-  style: :compressed
-
 collections:
   pages:
     output: true
-    permalink: /:name #/:categories/:name
+    permalink: /:name
   posts:
     output: true
-    permalink: /:slug #/:year/:month/:day/:slug
+    permalink: /:slug
   
 defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-      image: /assets/img/default-card.webp
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      image: /assets/img/default-card.webp
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      image: /assets/img/default-card.webp
