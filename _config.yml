@@ -2,8 +2,6 @@ site: Agregador™
 url: https://agregador.github.io
 title: Short URL
 description: Encurtador de URL
-tagline: Encurtador de URL
-lang: pt_BR
 link_default: https://t.me/gore24hrs
 
 permalink: pretty
@@ -26,5 +24,3 @@ collections:
   posts:
     output: true
     permalink: /:slug
-  
-defaults:
