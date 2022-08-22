@@ -1,11 +1,11 @@
-site: Agregador™
-url: https://agregador.github.io
 title: Short URL
 description: Encurtador de URL
+url: https://agregador.github.io
+baseurl: "/"
 link_default: https://t.me/gore24hrs
+url_adsense: https://bitcurioso.com
 
 permalink: pretty
-baseurl: ""
 
 highlighter: rouge
 markdown: kramdown

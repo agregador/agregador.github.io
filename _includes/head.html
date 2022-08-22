@@ -1,10 +1,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" type="image/x-icon">
     <title>{{ site.title }} – {{ site.description }}</title>
     {% if page.link %}
-        <meta http-equiv="refresh" content="0; URL={{ page.link }}?utm_source={{ page.utm_source }}&utm_medium={{ page.utm_medium }}&utm_campaign={{ page.utm_campaign }}" />
+        <meta http-equiv="refresh" content="0; URL={{ site.url_adsense }}{{ page.link }}?utm_source={{ page.utm_source }}&utm_medium={{ page.utm_medium }}&utm_campaign={{ page.utm_campaign }}" />
     {% else %}
         <meta http-equiv="refresh" content="0; URL={{ site.link_default }}" />
     {% endif %}
