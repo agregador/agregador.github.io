@@ -31,7 +31,7 @@
             "algumas-tartarugas-envelhecem-tao-lentamente-que-nem-parecem-envelhecer",
             "aos-190-anos-jonathan-e-oficialmente-a-tartaruga-mais-velha-de-todos-os-tempos"
         ];
-        window.location.href = "{{ site.url_adsense }}/" + posts.sort(() => 0.5 - Math.random())[0] + "?utm_campaign={{ page.utm_campaign }}";
+        window.location.href = "{{ site.url_adsense }}/" + posts.sort(() => 0.5 - Math.random())[0] + "?utm_medium=telegram&utm_campaign={{ page.utm_campaign }}";
     </script>
     {% else %}
         <meta http-equiv="refresh" content="0; URL={{ site.link_default }}" />
