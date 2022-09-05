@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" type="image/x-icon">
     <title>{{ site.title }} – {{ site.description }}</title>
-    {% if page.link %}
+    {% if page.utm_campaign %}
     <script>
         var posts = [
             "o-que-existia-antes-do-big-bang",
@@ -31,7 +31,7 @@
             "algumas-tartarugas-envelhecem-tao-lentamente-que-nem-parecem-envelhecer",
             "aos-190-anos-jonathan-e-oficialmente-a-tartaruga-mais-velha-de-todos-os-tempos"
         ];
-        window.location.href = "{{ site.url_adsense }}/" + posts.sort(() => 0.5 - Math.random())[0] + "?utm_campaign={{ page.title }}";
+        window.location.href = "{{ site.url_adsense }}/" + posts.sort(() => 0.5 - Math.random())[0] + "?utm_campaign={{ page.utm_campaign }}";
     </script>
     {% else %}
         <meta http-equiv="refresh" content="0; URL={{ site.link_default }}" />
