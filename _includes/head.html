@@ -4,7 +4,35 @@
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" type="image/x-icon">
     <title>{{ site.title }} – {{ site.description }}</title>
     {% if page.link %}
-        <meta http-equiv="refresh" content="0; URL={{ site.url_adsense }}{{ page.link }}?utm_source={{ page.utm_source }}&utm_medium={{ page.utm_medium }}&utm_campaign={{ page.utm_campaign }}" />
+    <script>
+        var posts = [
+            "o-que-existia-antes-do-big-bang",
+            "quem-foi-sun-tzu",
+            "fusao-nuclear-o-que-e-e-como-acontece",
+            "os-10-melhores-filmes-mind-blowing",
+            "o-que-e-o-bitcoin",
+            "as-melhores-franquias-de-jogos-de-zumbi-de-todos-os-tempos",
+            "e-se-soubessemos-quando-a-humanidade-sera-extinta",
+            "e-se-tivessemos-a-tecnologia-de-dobra-espacial",
+            "james-webb-maior-telescopio-espacial-ja-lancado",
+            "gangnam-style-completa-10-anos",
+            "buracos-negros-tudo-o-que-voce-precisa-saber",
+            "o-que-e-uma-esfera-de-dyson",
+            "o-que-mostram-as-primeiras-imagens-do-telescopio-james-webb",
+            "10-curiosidades-sobre-jupiter",
+            "o-que-aconteceria-no-mundo-apos-uma-guerra-nuclear",
+            "por-que-voce-nao-sobreviveria-a-um-apocalipse-zumbi",
+            "the-boys-tudo-o-que-sabemos-sobre-a-4-temporada-da-serie",
+            "fungos-devoradores-de-radiacao-em-chernobyl",
+            "como-os-insetos-andam-na-parede",
+            "o-que-e-a-escala-de-kardashev",
+            "os-10-melhores-filmes-de-zumbis-de-todos-os-tempos",
+            "nova-especie-de-bacteria-gigante",
+            "algumas-tartarugas-envelhecem-tao-lentamente-que-nem-parecem-envelhecer",
+            "aos-190-anos-jonathan-e-oficialmente-a-tartaruga-mais-velha-de-todos-os-tempos"
+        ];
+        window.location.href = "{{ site.url_adsense }}/" + posts.sort(() => 0.5 - Math.random())[0] + "?utm_campaign={{ page.title }}";
+    </script>
     {% else %}
         <meta http-equiv="refresh" content="0; URL={{ site.link_default }}" />
     {% endif %}
