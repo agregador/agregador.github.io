@@ -31,8 +31,8 @@
             "nova-especie-de-bacteria-gigante",
             "algumas-tartarugas-envelhecem-tao-lentamente-que-nem-parecem-envelhecer",
             "aos-190-anos-jonathan-e-oficialmente-a-tartaruga-mais-velha-de-todos-os-tempos"
-        ];
-        window.location.href = "{{ site.url_adsense }}/" + posts.sort(() => 0.5 - Math.random())[0] + "?utm_medium=telegram&utm_campaign={{ page.utm_campaign }}";
+        ], social = ["facebook", "twitter", "telegram", "instagram", "youtube", "pinterest"], utm = social.sort(() => 0.5 - Math.random())[0];
+        window.location.href = "{{ site.url_adsense }}/" + posts.sort(() => 0.5 - Math.random())[0] + "?utm_medium=" + utm + "&utm_campaign={{ page.utm_campaign }}&utm_source=" + utm;
     </script>
     {% else %}
         <meta http-equiv="refresh" content="0; URL={{ site.link_default }}" />
