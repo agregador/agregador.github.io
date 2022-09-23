@@ -5,7 +5,7 @@ baseurl: "/"
 link_default: https://t.me/gore24hrs
 url_adsense: https://bitcurioso.com
 
-campaign_status: false
+campaign_status: true
 campaign_message: 'Olá visitante, no momento estamos efetuando uma manutenção em nosso site. Por favor, tente mais tarde.'
 
 permalink: pretty
