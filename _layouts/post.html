@@ -5,3 +5,7 @@ layout: default
 <section class="post">
     {{ content }}
 </section>
+
+{% if site.campaign_status != nil %}
+<div>{{ site.campaign_message }}</div>
+{% endif %}
