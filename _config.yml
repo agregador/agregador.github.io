@@ -15,8 +15,8 @@ webmaster_verifications:
   #yandex: 
   #baidu: 
 
-baseurl: ""
-permalink: pretty
+baseurl: "/"
+#permalink: pretty
 collections:
   pages:
     output: true
