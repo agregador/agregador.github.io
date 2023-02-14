@@ -43,7 +43,8 @@ class LiveSearchEngine extends HTMLInputElement {
             empty = "<live-search-result-empty>Nenhum resultado encontrado, tente ser menos específico.</live-search-result-empty>",
             regexp_string = new RegExp(input.value, "i");
         search.forEach((post, key, last) => {
-            if ((post.title.search(regexp_string) != -1)) {
+            if ((post.title.search(regexp_string) != -1) 
+                || (post.hash.search(regexp_string) != -1)) {
             results += `<a href="`+ post.url +`">
                 <live-search-result-poster>
                     <img src="https://via.placeholder.com/48" alt="`+post.title+`">
