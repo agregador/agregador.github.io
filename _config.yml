@@ -18,6 +18,16 @@ webmaster_verifications:
 baseurl: ""
 permalink: pretty
 
+collections:
+  pages:
+    output: true
+    permalink: /:name #/:categories/:name
+  posts:
+    output: true
+    permalink: /:slug #/:year/:month/:day/:slug
+  downloads:
+    output: true
+
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
