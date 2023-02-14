@@ -13,20 +13,7 @@ layout: default
 		</div>
 		<div class="gallery">
 			{% for post in paginator.posts %}
-			<a class="gallery-item" href="{{ post.url | prepend: site.baseurl }}">
-				<div class="gallery-preview">
-					<div class="gallery-id category-{{ post.type }}">{{ post.type }}</div>
-					<img src="assets/img/logo.svg">
-				</div>
-				<div class="gallery-details-items">
-					<div class="gallery-date">{% assign months = "janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" | split: "," %}{% if post.post_date == post.post_modified %}{% assign month_number = post.post_date | date: "%-m" | minus: 1 %}Adicionado em {{ post.post_date | date: "%-d" }} de {{ months[month_number] }} de {{ post.post_date | date: "%Y" }}{% else %}{% assign month_number = post.post_modified | date: "%-m" | minus: 1 %}Atualizado em {{ post.post_modified | date: "%-d" }} de {{ months[month_number] }} de {{ post.post_modified | date: "%Y" }}{% endif %}</div>
-					<h3>{{ post.title }}</h3>
-					<div class="gallery-uploader category-{{ post.type }}">
-						<div class="gallery-uploader-name">{{ post.author }}</div>
-						<div class="gallery-uploader-posts">#</div>
-					</div>
-				</div>
-			</a>
+			{% include general/loop.html %}
 			{% endfor %}
 			{% include plugins/pagination.html %}
 		</div>
