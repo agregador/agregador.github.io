@@ -15,8 +15,9 @@ webmaster_verifications:
   #yandex: 
   #baidu: 
 
-baseurl: "/"
-#permalink: pretty
+baseurl: ""
+permalink: pretty
+
 collections:
   pages:
     output: true
@@ -28,10 +29,12 @@ collections:
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
+
+paginate: 20
+paginate_path: /page/:num/
+
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
-paginate: 20
-paginate_path: /page/:num/
