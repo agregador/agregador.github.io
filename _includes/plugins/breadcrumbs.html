@@ -1,0 +1,11 @@
+<div class="breadcrumbs">
+	<a href="{{ site.url }}">Página Inicial</a>
+	<svg width="100%" height="100%">
+		<use xlink:href="#arrow-right"></use>
+	</svg>
+	<a href="{{ site.url }}/{{ page.type | slugify: 'latin' }}">{{ page.type }}</a>
+	<svg width="100%" height="100%">
+		<use xlink:href="#arrow-right"></use>
+	</svg>
+	<a href="{{ page.url | absolute_url }}">{{ page.title }}</a>
+</div>

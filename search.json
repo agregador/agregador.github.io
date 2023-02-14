@@ -1,0 +1,14 @@
+---
+layout: null
+---
+[{% for post in site.posts %}
+    {
+        "url": "{{ site.baseurl }}{{ post.url }}",
+        "date": {{ post.date | jsonify }},
+        "title": {{ post.title | jsonify }},
+        "type": {{ post.type | jsonify }},
+        "hash": {{ post.hash | jsonify }},
+        "author": {{ post.author | jsonify }},
+        "categories": [{% for categorie in post.categories %}{{ categorie | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}]
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+]

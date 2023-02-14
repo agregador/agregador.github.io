@@ -5,3 +5,5 @@ tmp
 .DS_Store
 .jekyll-cache
 .git
+Thumbs.db
+ehthumbs.db

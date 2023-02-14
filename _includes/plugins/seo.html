@@ -1,0 +1,44 @@
+{% if page.type %}
+<meta name="generator" content="Jekyll v{{ jekyll.version }}" />
+<meta name="author" content="{{ page.author }}" />
+<meta name="description" content="{{ page.description }}" />
+<meta property="og:locale" content="{{ site.lang }}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.description }}" />
+<meta property="og:image" content="{{ page.poster }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:site_name" content="{{ site.site }}" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="{{ page.title }}" />
+<meta name="twitter:image:alt" content="{{ page.description }}">
+<meta name="google-site-verification" content="{{ site.webmaster_verifications.google }}" />
+<script type="application/ld+json">
+[
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Página Inicial",
+            "item": "{{ site.url }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "{{ page.type }}",
+            "item": "{{ site.url }}/{{ page.type | slugify: "latin" }}"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": {{ page.title | jsonify }},
+            "item": "{{ page.url | absolute_url }}"
+        }]
+    }
+]
+</script>
+{% else %}
+{% seo title=false %}
+{% endif %}

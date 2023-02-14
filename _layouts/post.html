@@ -1,11 +1,16 @@
 ---
 layout: default
 ---
-
-<section class="post">
-    {{ content }}
-</section>
-
-{% if site.campaign_status != nil %}
-<div>{{ site.campaign_message }}</div>
-{% endif %}
+<main>
+    <div class="container">
+        <div class="article-content">
+            <div class="article-header category-{{ page.type | slugify: 'latin' }}">
+                {% include plugins/breadcrumbs.html %}
+                <div class="article-category">{{ page.type }}</div>
+            </div>
+            <h2 class="article-title">
+                <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            </h2>
+        </div>
+    </div>
+</main>

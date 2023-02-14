@@ -1,11 +1,33 @@
 ---
 layout: default
 ---
-
-<section class="posts">
-	{% for post in site.posts %}{% endfor %}
-</section>
-
-{% if site.campaign_status != nil %}
-<div>{{ site.campaign_message }}</div>
-{% endif %}
+<main>
+	<div class="content">
+		<div class="content-top">
+			<div class="content-item">Últimas Atualizações</div>
+			<div class="content-item">Left</div>
+		</div>
+		<div class="gallery">
+			{% for post in paginator.posts %}
+			<a class="gallery-item" href="{{ post.url | prepend: site.baseurl }}">
+				<div class="gallery-preview">
+					<div class="gallery-id category-vip">{{ post.type }}</div>
+					<img src="{{ post.poster_path }}">
+				</div>
+				<div class="gallery-details-items">
+					<div class="gallery-date">{% assign months = "janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" | split: "," %}{% if post.post_date == post.post_modified %}{% assign month_number = post.post_date | date: "%-m" | minus: 1 %}Adicionado em {{ post.post_date | date: "%-d" }} de {{ months[month_number] }} de {{ post.post_date | date: "%Y" }}{% else %}{% assign month_number = post.post_modified | date: "%-m" | minus: 1 %}Atualizado em {{ post.post_modified | date: "%-d" }} de {{ months[month_number] }} de {{ post.post_modified | date: "%Y" }}{% endif %}</div>
+					<h3>{{ post.title }}</h3>
+					<div class="gallery-uploader category-vip">
+						<div class="gallery-uploader-name">{{ post.author }}</div>
+						<div class="gallery-uploader-posts">#</div>
+					</div>
+				</div>
+			</a>
+				{% if forloop.index == 5 %}
+					
+				{% endif %}
+			{% endfor %}
+			{% include plugins/pagination.html %}
+		</div>
+	</div>
+</main>

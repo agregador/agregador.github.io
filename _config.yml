@@ -1,29 +1,39 @@
-title: Short URL
-description: Encurtador de URL
+site: Daily Dose Of Gore
 url: https://h4y.uk
-baseurl: "/"
-link_default: https://t.me/gore24hrs
-url_adsense: https://bitcurioso.com
+title: Daily Dose Of Gore
+description: Daily Dose Of Gore
+tagline: Daily Dose Of Gore...
+lang: pt_BR
+author: groupunknown
+google_analytics: UA-120280297-1
+google_analytics_status: false
 
-campaign_status: true
-campaign_message: 'Olá visitante, no momento estamos efetuando uma manutenção em nosso site. Por favor, tente mais tarde.'
+webmaster_verifications:
+  #google: BHhjherZoAFIqjGDO05JmCzgLmKjOIr-pD8N7TYvkg8
+  #bing: 
+  #alexa: 
+  #yandex: 
+  #baidu: 
 
+baseurl: ""
 permalink: pretty
 
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  html_to_native: true
-  auto_ids: false
+collections:
+  pages:
+    output: true
+    permalink: /:name #/:categories/:name
+  posts:
+    output: true
+    permalink: /:slug #/:year/:month/:day/:slug
 
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
 
-collections:
-  pages:
-    output: true
-    permalink: /:name
-  posts:
-    output: true
-    permalink: /:slug
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+paginate: 20
+paginate_path: /page/:num/
