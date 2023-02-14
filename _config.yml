@@ -17,23 +17,22 @@ webmaster_verifications:
 
 baseurl: ""
 permalink: pretty
-
 collections:
   pages:
     output: true
-    permalink: /:name #/:categories/:name
+    permalink: /:name
   posts:
     output: true
-    permalink: /:slug #/:year/:month/:day/:slug
-
+    permalink: /:slug
+paginate: 10
+paginate_path: /page/:num/
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
-
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-feed
   - jekyll-sitemap
-
 paginate: 20
 paginate_path: /page/:num/
