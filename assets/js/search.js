@@ -46,7 +46,7 @@ class LiveSearchEngine extends HTMLInputElement {
             if ((post.title.search(regexp_string) != -1)) {
             results += `<a href="`+ post.url +`">
                 <live-search-result-poster>
-                    <img src="assets/posts/img/48`+post.hash+`.jpg" alt="`+post.title+`">
+                    <img src="https://via.placeholder.com/48" alt="`+post.title+`">
                 </live-search-result-poster>
                 <live-search-result-summary>
                     <live-search-result-title>`+post.title+`</live-search-result-title>
