@@ -8,7 +8,7 @@
 		<h3>{{ post.title }}</h3>
 		<div class="gallery-uploader category-{{ post.type }}">
 			<div class="gallery-uploader-name">{{ post.author }}</div>
-			<div class="gallery-uploader-posts">{% assign author_posts = site.posts | where: "author", author.name %}{{ author_posts.size }}</div>
+			<div class="gallery-uploader-posts">{% assign author_posts = site.posts | where: "author", post.author %}{{ author_posts.size }}</div>
 		</div>
 	</div>
 </a>
