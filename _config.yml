@@ -26,6 +26,13 @@ collections:
     output: true
     permalink: /:title
 
+defaults:
+  -
+    scope:
+      path: "" 
+    values:
+      layout: "default"
+
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
