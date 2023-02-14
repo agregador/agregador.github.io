@@ -24,8 +24,7 @@ collections:
   posts:
     output: true
     permalink: /:slug
-paginate: 10
-paginate_path: /page/:num/
+
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
