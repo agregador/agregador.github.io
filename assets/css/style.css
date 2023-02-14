@@ -589,6 +589,7 @@ nav a.active {
     right: 0.5rem;
     font-family: Monaco,Consolas,"Lucida Console",monospace;
     font-weight: 600;
+    text-transform: uppercase;
     color: var(--category-color);
     background: var(--category-background);
     padding: 0 0.5rem;
