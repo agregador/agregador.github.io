@@ -15,7 +15,7 @@ webmaster_verifications:
   #yandex: 
   #baidu: 
 
-baseurl: "/"
+baseurl: ""
 permalink: pretty
 collections:
   pages:
