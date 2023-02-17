@@ -58,7 +58,9 @@ layout: default
                     </div>
                     {% endif %}
                     {% endfor %}
-                    {% if author_check == 0 %}{% endif %}
+                    {% if author_check == 0 %}
+
+                    {% endif %}
                     <div class="player-description">
                         <div class="player-description-items">
                             <div class="content-date">{% assign months = "janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" | split: "," %}{% if page.post_date == page.post_modified %}{% assign month_number = page.post_date | date: "%-m" | minus: 1 %}Enviado em {{ page.post_date | date: "%-d" }} de {{ months[month_number] }} de {{ page.post_date | date: "%Y" }}{% else %}{% assign month_number = page.post_modified | date: "%-m" | minus: 1 %}Atualizado em {{ page.post_modified | date: "%-d" }} de {{ months[month_number] }} de {{ page.post_modified | date: "%Y" }}{% endif %}</div>

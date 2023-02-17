@@ -1,7 +1,7 @@
 - name: Vitor Hugo
   role: 5 # Administrador
   avatar: /assets/img/authors/heisenberg/100x100.webp
-- name: Hannibal Lecter
+- name: DailyDoseOfGore
   role: 4 # Moderador
   avatar: /assets/img/authors/hannibal_lecter/100x100.webp
 - name: Pennywise
