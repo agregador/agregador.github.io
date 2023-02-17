@@ -36,4 +36,9 @@
             toggleClass((localStorage.getItem("theme-preference") == null) ? "theme-light" : localStorage.getItem("theme-preference"));
         });
     </script>
+    {% if page.type %}
+    <script type="text/javascript" src="assets/js/jwplayer/7.12.13/jwplayer.js"></script>
+    <script type="text/javascript">jwplayer.key = 'CKjOe06GxAOe3Dj9NaWPCQKtqvqQdyFV8z9wsg==';</script>
+    <style type="text/css">.jw-rightclick{display: none !important}.jw-button-download{background-image: url("data:image/svg xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgZmlsbD0iIzk1OTc5YiIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCI PHBhdGggZD0iTTQ5OS40IDY3Ni42IDY5NS42IDQyOUg1NTguNVY3MS45aC0xMjNWNDI5SDMwMy4xbDE5Ni4zIDI0Ny42eiIvPjxwYXRoIGQ9Ik04NjEuMyA2NDQuMXYxNTMuOEgxMzguN1Y2NDQuMUgxMHYyODQuMWg5ODBWNjQ0LjFIODYxLjN6Ii8 PC9zdmc DQo=");background-repeat: no-repeat;background-size: 19px 19px;background-position: center;width: 32px;-webkit-transition: background-image .3s ease,fill .3s ease;transition: background-image .3s ease,fill .3s ease}.jw-button-download:hover{background-image: url("data:image/svg xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgZmlsbD0id2hpdGUiIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiPjxwYXRoIGQ9Ik00OTkuNCA2NzYuNiA2OTUuNiA0MjlINTU4LjVWNzEuOWgtMTIzVjQyOUgzMDMuMWwxOTYuMyAyNDcuNnoiLz48cGF0aCBkPSJNODYxLjMgNjQ0LjF2MTUzLjhIMTM4LjdWNjQ0LjFIMTB2Mjg0LjFoOTgwVjY0NC4xSDg2MS4zeiIvPjwvc3ZnPg==");-webkit-transition: background-image .3s ease,fill .3s ease;transition: background-image .3s ease,fill .3s ease}.jwplayer-message{}.jwp-msg-content{position: absolute;z-index: 1;width: 100%;height: 100%;color: var(--category-color);background: var(--category-background);backdrop-filter: blur(5px)}.jwp-msg-col{display: flex;justify-content: center;align-items: center;width: 100%;height: 100%}</style>
+    {% endif %}
 </head>
