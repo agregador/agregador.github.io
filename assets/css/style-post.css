@@ -29,7 +29,7 @@
 }
 
 /* footer player */
-.player-ads {
+.player-video-title {
     display: flex;
     align-items: center;
     gap: .875rem;
@@ -38,7 +38,7 @@
     background: var(--sub-background);
     border: 1px solid var(--border-color);
 }
-.player-ads.active {
+.player-video-title.active {
     border-bottom-right-radius: 4px;
 }
 btn-player {
@@ -349,7 +349,7 @@ btn-player.active .btn-player-stash {
     .uploader-role {
         display: none;
     }
-    .player-ads {
+    .player-video-title {
         border-bottom-left-radius: 0;
     }
     .player-uploader-item {
@@ -391,7 +391,7 @@ btn-player.active .btn-player-stash {
     .player-breadcrumbs svg {
         transform: rotate(90deg);
     }
-    .player-ads {
+    .player-video-title {
         flex-direction: column;
         text-align: center;
     }
