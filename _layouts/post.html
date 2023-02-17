@@ -2,15 +2,73 @@
 layout: default
 ---
 <main>
-    <div class="container">
-        <div class="article-content">
-            <div class="article-header category-{{ page.type | slugify: 'latin' }}">
+    <div class="content-aside">
+        <div class="player-content">
+            <div class="player-header category-free">
                 {% include plugins/breadcrumbs.html %}
-                <div class="article-category">{{ page.type }}</div>
+                <div class="player-category">{{ page.type }}</div>
             </div>
-            <h2 class="article-title">
-                <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-            </h2>
+            <div class="player-video">
+                <div id="jwplayer_message" class="jwplayer-message category-vip"></div>
+                <div id="jwplayer"></div>
+            </div>
+            <div class="player-ads">
+                <btn-player class="active">
+                    <div class="btn-player">
+                        <div class="player-category category-{{ page.type }}">{{ page.type }}</div>
+                        <div class="player-title">{{ page.title }}</div>
+                    </div>
+                    <svg class="btn-player-stash" viewBox="0 0 10 16" version="1.1" width="14" height="18" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5 11L0 6l1.5-1.5L5 8.25 8.5 4.5 10 6l-5 5z"></path>
+                    </svg>
+                </btn-player>
+            </div>
+            <div class="player-footer active">
+                <div class="player-informations">
+                    {% assign author_check = 0 %}
+                    {% for author in site.data.authors %}
+                    {% if author.name == page.author %}
+                    {% assign rank = author.role %}
+                    {% capture role %}{% if rank == 0 %}estagiário{% elsif rank == 1 %}autor{% elsif rank == 2 %}suporte{% elsif rank == 3 %}editor{% elsif rank == 4 %}moderador{% elsif rank == 5 %}administrador{% endif %}{% endcapture %}
+                    {% assign author_check = author_check | plus:1 %}
+                    <div class="player-uploader">
+                        <div>
+                            <div class="uploader-avatar avatar-morph">
+                                <img src="{{ site.baseurl }}{{ author.avatar }}" alt="{{ author.name }}" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="player-uploader-item">
+                            <div class="uploader-role role-{{ author.role }}">{{ role | slugify: "latin" }}</div>
+                            <div class="uploader-name">{{ author.name }}</div>
+                            <div class="uploader-infor">
+                                <div>
+                                    <span>Publicações:</span>{% assign author_posts = site.posts | where: "author", author.name %}
+                                    <span class="uploader-infor-count" style="--num:{{ author_posts.size }};"></span>
+                                </div>
+                                <div>
+                                    <span>FREE:</span>{% assign free = site.posts | where: "author", author.name | where: "type", "free" %}
+                                    <span class="uploader-infor-count" style="--num:{{ free.size }};"></span>
+                                </div>
+                                <div>
+                                    <span>VIP:</span>{% assign vip = site.posts | where: "author", author.name | where: "type", "vip" %}
+                                    <span class="uploader-infor-count" style="--num:{{ vip.size }};"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-description">
+                        <div class="player-description-items">
+                            <div class="content-date">{% assign months = "janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" | split: "," %}{% if page.post_date == page.post_modified %}{% assign month_number = page.post_date | date: "%-m" | minus: 1 %}Enviado em {{ page.post_date | date: "%-d" }} de {{ months[month_number] }} de {{ page.post_date | date: "%Y" }}{% else %}{% assign month_number = page.post_modified | date: "%-m" | minus: 1 %}Atualizado em {{ page.post_modified | date: "%-d" }} de {{ months[month_number] }} de {{ page.post_modified | date: "%Y" }}{% endif %}</div>
+                            <div class="content-views">???</div>
+                        </div>
+                        <div class="content-description">{{ content }}</div>
+                        <div class="content-tags category-{{ page.type }}">
+                            {% for cat in page.categories %}
+                            <a href="#">{{ cat }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 </main>

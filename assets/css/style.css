@@ -750,3 +750,42 @@ nav a.active {
 .notice-danger code {
     background-color: #fef7f7;
 }
+/* PAGINAÇÃO */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination a,
+.pagination span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    border-left: 0;
+}
+.pagination .active {
+    background: var(--hover);
+    pointer-events: none;
+}
+.pagination .active svg {
+    opacity: .3;
+}
+.pagination a:hover {
+    background: var(--hover);
+    cursor: pointer;
+}
+.pagination a:first-child,
+.pagination span:first-child {
+    border-left: 1px solid var(--border-color);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.pagination a:last-child,
+.pagination span:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+/* PAGINAÇÃO */
