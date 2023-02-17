@@ -1,0 +1,18 @@
+- name: Vitor Hugo
+  role: 5 # Administrador
+  avatar: /assets/img/authors/heisenberg/100x100.webp
+- name: Hannibal Lecter
+  role: 4 # Moderador
+  avatar: /assets/img/authors/hannibal_lecter/100x100.webp
+- name: Pennywise
+  role: 3 # Editor
+  avatar: /assets/img/authors/pennywise/100x100.webp
+- name: Voldemort
+  role: 2 # Suporte
+  avatar: /assets/img/authors/voldemort/100x100.webp
+- name: Rick Grimes
+  role: 1 # Autor
+  avatar: /assets/img/authors/rick_grimes/100x100.webp
+- name: Unknown
+  role: 0 # Estagiário
+  avatar: /assets/img/authors/unknown.gif
