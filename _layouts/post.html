@@ -27,6 +27,7 @@ layout: default
                 <div class="player-informations">
                     {% assign author_check = 0 %}
                     {% for author in site.data.authors %}
+                    {% if author.name == page.author %}
                     {% assign rank = author.role %}
                     {% capture role %}{% if rank == 0 %}estagiário{% elsif rank == 1 %}autor{% elsif rank == 2 %}suporte{% elsif rank == 3 %}editor{% elsif rank == 4 %}moderador{% elsif rank == 5 %}administrador{% endif %}{% endcapture %}
                     {% assign author_check = author_check | plus:1 %}
@@ -55,6 +56,9 @@ layout: default
                             </div>
                         </div>
                     </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% if author_check == 0 %}{% endif %}
                     <div class="player-description">
                         <div class="player-description-items">
                             <div class="content-date">{% assign months = "janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" | split: "," %}{% if page.post_date == page.post_modified %}{% assign month_number = page.post_date | date: "%-m" | minus: 1 %}Enviado em {{ page.post_date | date: "%-d" }} de {{ months[month_number] }} de {{ page.post_date | date: "%Y" }}{% else %}{% assign month_number = page.post_modified | date: "%-m" | minus: 1 %}Atualizado em {{ page.post_modified | date: "%-d" }} de {{ months[month_number] }} de {{ page.post_modified | date: "%Y" }}{% endif %}</div>
