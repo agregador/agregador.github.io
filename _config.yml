@@ -11,7 +11,7 @@ google_analytics_status: false
 webmaster_verifications:
   #google: BHhjherZoAFIqjGDO05JmCzgLmKjOIr-pD8N7TYvkg8
 
-player_global_url: http://51.195.216.64:5000
+player_global_url: //51.195.216.64:5000
 auth_user_localstorage: user
 
 baseurl: ""
