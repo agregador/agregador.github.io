@@ -8,6 +8,15 @@ customElements.define("header-mobile", class extends HTMLElement {
         });
     }
 });
+customElements.define("btn-aside", class extends HTMLElement {
+    constructor() {
+        super();
+        this.addEventListener("click", e => {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("active");
+        });
+    }
+});
 const words = ["Gore", "Accidents", "Tragedies", "Deaths"],
   colors = ["color-1", "color-2", "color-3", "color-4"],
   text = document.querySelector(".name-site");

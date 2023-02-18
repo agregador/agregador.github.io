@@ -54,3 +54,14 @@ playerInstance.setup({
         }
     }
 });
+
+customElements.define("btn-player", class extends HTMLElement {
+    constructor() {
+        super();
+        this.addEventListener("click", e => {
+            this.classList.toggle("active");
+            this.parentElement.classList.toggle("active");
+            this.parentElement.nextElementSibling.classList.toggle("active");
+        });
+    }
+});
